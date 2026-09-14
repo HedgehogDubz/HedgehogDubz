@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="340" viewBox="0 0 760 340">
+<rect width="760" height="340" rx="24" fill="#0a0f16"/><rect x="22" y="22" width="716" height="296" rx="18" fill="#0d141d" stroke="#263646"/>
+<text x="45" y="57" fill="#75f7ba" font-family="monospace" font-size="17">TABDOCK // DOCKABLE PYQT6 UI FRAMEWORK</text>
+<text x="45" y="92" fill="#8ba0b5" font-family="monospace" font-size="13">tabs   resizable docks   tear-out panels   shared state</text>
+<rect x="52" y="118" width="656" height="150" rx="10" fill="#0a1119" stroke="#355065"/>
+<rect x="52" y="118" width="656" height="26" rx="10" fill="#121d28"/><text x="70" y="136" fill="#75f7ba" font-family="monospace" font-size="11">MAIN     DEBUG     ANALYTICS</text>
+<rect x="64" y="154" width="135" height="102" fill="#101923" stroke="#2c4458"/><rect x="207" y="154" width="310" height="102" fill="#0d1720" stroke="#2c4458"/><rect x="525" y="154" width="171" height="102" fill="#101923" stroke="#2c4458"/>
+<text x="79" y="181" fill="#9fb0c0" font-family="monospace" font-size="11">FILES</text><text x="221" y="181" fill="#9fb0c0" font-family="monospace" font-size="11">EDITOR / VIEWPORT</text><text x="540" y="181" fill="#9fb0c0" font-family="monospace" font-size="11">INSPECTOR</text>
+<path d="M200 154 V256 M518 154 V256" stroke="#75f7ba" stroke-width="3"/>
+<text x="45" y="292" fill="#73879a" font-family="monospace" font-size="12">pip install tabdock   •   IDE / game-engine inspired layouts</text></svg>
