@@ -39,7 +39,7 @@ C++ market-data system that replays IEX DEEP+ traffic over UDP multicast, mainta
 <td width="50%" valign="top">
 
 <a href="https://github.com/HedgehogDubz/RiverML-Machine-Learning-Pipeline">
-  <img src="./assets/RiverML-Showcase-GitHub.gif" width="100%" alt="RiverML preview" />
+  <img src="./assets/RiverML-Showcase-GitHub-cropped.gif" width="100%" alt="RiverML preview" />
 </a>
 
 ### [RiverML](https://github.com/HedgehogDubz/RiverML-Machine-Learning-Pipeline)
