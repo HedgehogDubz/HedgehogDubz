@@ -66,7 +66,19 @@ A PyQt6 dockable UI framework inspired by IDEs, game engines, and creative tools
 
 </td>
 <td width="50%" valign="top">
+  
+## Livestream Particle Life
 
+<img src="./assets/particle-life.gif" width="100%" alt="Livestream Particle Life demo" />
+
+A particle-life simulation focused on emergent behavior, visual interaction, and live motion. The system shows simple local rules turning into complex large-scale structure in real time.
+
+**C++ · Simulation · Modeling · Livestream**
+
+
+</td>
+</tr>
+</table>
 ## What I'm interested in
 
 ```text
@@ -77,9 +89,5 @@ machine learning internals
 developer tools
 distributed + networked software
 ```
-
-</td>
-</tr>
-</table>
 
 
