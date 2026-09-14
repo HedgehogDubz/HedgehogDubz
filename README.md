@@ -26,7 +26,7 @@ Outside class, I have worked on computational neuroscience GPU-accelerated clust
 <td width="50%" valign="top">
 
 <a href="https://github.com/HedgehogDubz/Mega-Feed-Handler">
-  <img src="./assets/feed-handler.svg" width="100%" alt="Mega Feed Handler preview" />
+  <img src="./assets/feed-handler-v2.svg" width="100%" alt="Mega Feed Handler preview" />
 </a>
 
 ### [Mega Feed Handler](https://github.com/HedgehogDubz/Mega-Feed-Handler)
