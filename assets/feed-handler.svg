@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="408" viewBox="0 0 900 408" role="img" aria-labelledby="title desc">
+  <title id="title">Mega Feed Handler</title>
+  <desc id="desc">Conceptual market data feed handler showing replay input, multicast buckets, one MSFT subscriber, an integrated retransmission ring, UDP multicast, and TCP recovery.</desc>
+
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#78baff"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#74ddac"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e8c66c"/>
+    </marker>
+    <clipPath id="book-bars">
+      <rect x="787" y="220" width="58" height="59" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    .kicker { font-size: 10px; font-weight: 700; letter-spacing: 1.4px; fill: #78baff; }
+    .title { font-size: 27px; font-weight: 700; fill: #eef2f8; }
+    .label { font-size: 16px; font-weight: 700; fill: #eef2f8; }
+    .small { font-size: 12px; fill: #a2aebc; }
+    .tiny { font-size: 10px; fill: #eef2f8; }
+    .tiny-muted { font-size: 10px; fill: #a2aebc; }
+    .tiny-green { font-size: 10px; fill: #74ddac; }
+    .tiny-gold { font-size: 10px; fill: #e8c66c; }
+    .tiny-strong { font-size: 10px; font-weight: 700; fill: #eef2f8; }
+
+    .card { fill: #111923; stroke: #2d3b4b; stroke-width: 1.2; }
+    .inner { fill: #0d141c; stroke: #334255; stroke-width: 1; }
+    .bucket { fill: #11251c; stroke: #35614e; stroke-width: 1; }
+    .bucket-hot { fill: #143227; stroke: #4f936f; stroke-width: 1.2; }
+
+    .blue-path { fill: none; stroke: #78baff; stroke-width: 3; stroke-linecap: round; marker-end: url(#arrow-blue); }
+    .green-path { fill: none; stroke: #74ddac; stroke-width: 3; stroke-linecap: round; marker-end: url(#arrow-green); }
+    .gold-request { fill: none; stroke: #e8c66c; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 7 7; marker-end: url(#arrow-gold); }
+    .gold-replay { fill: none; stroke: #e8c66c; stroke-width: 2.5; stroke-linecap: round; marker-end: url(#arrow-gold); }
+  </style>
+
+  <rect width="900" height="408" rx="22" fill="#0a0f16"/>
+  <rect x="10" y="10" width="880" height="388" rx="20" fill="none" stroke="#1d2630"/>
+
+  <text x="34" y="31" class="kicker">MARKET DATA PIPELINE</text>
+  <text x="34" y="60" class="title">Mega Feed Handler</text>
+  <rect x="34" y="76" width="150" height="3" rx="1.5" fill="#78baff"/>
+
+  <!-- Source -->
+  <rect x="34" y="110" width="176" height="158" rx="17" class="card"/>
+  <text x="52" y="134" class="label">IEX DEEP+ PCAP</text>
+  <text x="52" y="154" class="small">session replay</text>
+  <rect x="52" y="178" width="140" height="65" rx="10" class="inner"/>
+  <text x="64" y="198" class="tiny-strong">recorded feed</text>
+  <text x="64" y="217" class="tiny-muted">sent to handler</text>
+  <text x="64" y="235" class="tiny" fill="#78baff">source stream</text>
+
+  <!-- Source -> handler -->
+  <path d="M210 190 H278" class="blue-path"/>
+  <circle r="4" fill="#78baff"><animateMotion dur="1.6s" repeatCount="indefinite" path="M214 190 H272"/></circle>
+  <circle r="4" fill="#78baff"><animateMotion dur="1.6s" begin="-0.8s" repeatCount="indefinite" path="M214 190 H272"/></circle>
+
+  <!-- Handler -->
+  <rect x="278" y="96" width="334" height="244" rx="20" class="card"/>
+  <text x="298" y="122" class="label">Feed Handler</text>
+  <text x="298" y="142" class="small">decode, publish, retain, recover</text>
+
+  <!-- One combined inner block with divider -->
+  <rect x="298" y="160" width="250" height="143" rx="10" class="inner"/>
+  <line x1="298" y1="225" x2="548" y2="225" stroke="#334255" stroke-width="1"/>
+
+  <text x="310" y="179" class="tiny-strong">order-by-order → price levels</text>
+  <text x="310" y="198" class="tiny-muted">bucketed multicast transport</text>
+
+  <text x="310" y="245" class="tiny-strong">Retransmission ring</text>
+  <text x="310" y="264" class="tiny-muted">retains recent datagrams</text>
+  <text x="310" y="283" class="tiny-gold">handles gap-fill recovery</text>
+
+  <!-- Buckets -->
+  <path d="M548 143 H566" stroke="#74ddac" stroke-width="3" stroke-linecap="round"/>
+  <path d="M548 193 H566" stroke="#74ddac" stroke-width="3" stroke-linecap="round"/>
+  <path d="M548 243 H566" stroke="#74ddac" stroke-width="3" stroke-linecap="round"/>
+  <path d="M548 293 H566" stroke="#74ddac" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="566" y="124" width="58" height="38" rx="8" class="bucket"/>
+  <text x="578" y="140" class="tiny-green">B0</text>
+  <text x="576" y="154" class="tiny-muted">other</text>
+
+  <rect x="566" y="174" width="58" height="38" rx="8" class="bucket-hot"/>
+  <text x="578" y="190" class="tiny-green">B1</text>
+  <text x="576" y="204" class="tiny-strong">MSFT</text>
+
+  <rect x="566" y="224" width="58" height="38" rx="8" class="bucket"/>
+  <text x="578" y="240" class="tiny-green">B2</text>
+  <text x="576" y="254" class="tiny-muted">other</text>
+
+  <rect x="566" y="274" width="58" height="38" rx="8" class="bucket"/>
+  <text x="578" y="290" class="tiny-green">B3</text>
+  <text x="576" y="304" class="tiny-muted">other</text>
+
+  <!-- Visible B1 subscriber -->
+  <!-- Split into three segments so the center can genuinely disappear during a drop. -->
+  <path d="M624 193 H644" stroke="#74ddac" stroke-width="3" stroke-linecap="round"/>
+  <path d="M660 193 H684" class="green-path"/>
+
+  <!-- The center section is normally green, but vanishes during the packet-loss moment. -->
+  <path d="M644 193 H660" stroke="#74ddac" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="opacity"
+             values="1;1;0;0;1;1"
+             keyTimes="0;.39;.40;.49;.50;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </path>
+
+  <!-- Normal UDP packets. During the visible X/drop moment they disappear so
+       no packet appears to pass through the blocked section. -->
+  <circle r="4" fill="#74ddac">
+    <animateMotion dur="1.5s" repeatCount="indefinite" path="M628 193 H678"/>
+    <animate attributeName="opacity"
+             values="1;1;0;0;1;1"
+             keyTimes="0;.39;.40;.49;.50;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </circle>
+  <circle r="4" fill="#74ddac">
+    <animateMotion dur="1.5s" begin="-0.75s" repeatCount="indefinite" path="M628 193 H678"/>
+    <animate attributeName="opacity"
+             values="1;1;0;0;1;1"
+             keyTimes="0;.39;.40;.49;.50;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Drop marker: no black patch, just the X occupying the missing green segment. -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;.39;.40;.49;.50;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+    <line x1="645" y1="186" x2="659" y2="200"
+          stroke="#ff7f7f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="645" y1="200" x2="659" y2="186"
+          stroke="#ff7f7f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Subscriber -->
+  <rect x="684" y="116" width="180" height="194" rx="18" class="card"/>
+  <text x="700" y="140" class="label">MSFT Subscriber</text>
+  <text x="700" y="160" class="small">listens to B1 only</text>
+
+  <rect x="698" y="181" width="152" height="107" rx="10" class="inner"/>
+  <text x="710" y="198" class="tiny-muted">LIVE PRICE-LEVEL BOOK</text>
+  <line x1="710" y1="209" x2="838" y2="209" stroke="#25303c"/>
+  <text x="710" y="228" class="tiny-green">best bid</text>
+  <text x="710" y="247" class="tiny-green">bid level</text>
+  <line x1="710" y1="256" x2="838" y2="256" stroke="#3a2d31"/>
+  <text x="710" y="275" class="tiny" fill="#ff7f7f">best ask</text>
+
+  <g clip-path="url(#book-bars)">
+    <rect x="787" y="220" width="48" height="9" rx="4" fill="#2e9f69"><animate attributeName="width" values="42;56;46;52;42" dur="3.2s" repeatCount="indefinite"/></rect>
+    <rect x="787" y="239" width="40" height="9" rx="4" fill="#267b55"><animate attributeName="width" values="34;45;38;44;34" dur="3.8s" repeatCount="indefinite"/></rect>
+    <rect x="787" y="267" width="52" height="9" rx="4" fill="#cf625b"><animate attributeName="width" values="45;56;49;57;45" dur="4.1s" repeatCount="indefinite"/></rect>
+  </g>
+<!-- Yellow recovery paths farther apart, same endpoints -->
+  <path d="M774 310 C748 370 602 388 423 303" class="gold-request"/>
+  <path d="M423 303 C596 344 738 338 774 310" class="gold-replay"/>
+
+  <!-- request packets -->
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3.4s" repeatCount="indefinite" path="M774 310 C748 370 602 388 423 303"/></circle>
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3.4s" begin="-1.13s" repeatCount="indefinite" path="M774 310 C748 370 602 388 423 303"/></circle>
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3.4s" begin="-2.26s" repeatCount="indefinite" path="M774 310 C748 370 602 388 423 303"/></circle>
+
+  <!-- replay packets -->
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3s" repeatCount="indefinite" path="M423 303 C596 344 738 338 774 310"/></circle>
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3s" begin="-1s" repeatCount="indefinite" path="M423 303 C596 344 738 338 774 310"/></circle>
+  <circle r="3.2" fill="#e8c66c"><animateMotion dur="3s" begin="-2s" repeatCount="indefinite" path="M423 303 C596 344 738 338 774 310"/></circle>
+
+  <!-- Legend -->
+  <rect x="34" y="350" width="247" height="34" rx="12" class="inner"/>
+  <circle cx="51" cy="367" r="4" fill="#74ddac"/>
+  <text x="64" y="371" class="tiny">multicast (UDP)</text>
+  <circle cx="165" cy="367" r="4" fill="#e8c66c"/>
+  <text x="178" y="371" class="tiny">recovery (TCP)</text>
+</svg>
