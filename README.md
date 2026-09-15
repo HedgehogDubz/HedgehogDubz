@@ -74,7 +74,8 @@ A PyQt6 dockable UI framework inspired by IDEs, game engines, and creative tools
 
 ### [Livestream Particle Life](https://github.com/HedgehogDubz/Livestream-Particle-Life)
 
-A particle-life simulation focused on emergent behavior, visual interaction, and live motion. The system shows simple local rules turning into complex large-scale structure in real time.
+A particle-life simulation focused on emergent behavior, visual interaction, and live motion. The system shows simple local rules turning into complex large-scale structures. 
+Built during a livestream.
 
 **C++ · Simulation · Modeling · Livestream**
 
