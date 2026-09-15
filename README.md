@@ -12,7 +12,7 @@ Low-Latency Software · Machine Learning
 
 [Email](mailto:tristankenshin@gmail.com) · [LinkedIn](https://www.linkedin.com/in/tristan-winata) · [Repositories](https://github.com/HedgehogDubz?tab=repositories)
 
-Outside class, I have worked on computational neuroscience GPU-accelerated clustering pipelines, M&A software, market-data infrastructure, and machine-learning tooling. I specialize in low-level development and building foundational architectures I understand inside and out.
+I have worked on computational neuroscience GPU-accelerated clustering pipelines, M&A software, market-data infrastructure, machine-learning tooling, and more. I fancy learning low-level development and building foundational architectures I understand inside and out.
 </td>
 </tr>
 </table>
