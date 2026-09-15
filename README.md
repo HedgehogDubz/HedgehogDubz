@@ -82,6 +82,7 @@ A particle-life simulation focused on emergent behavior, visual interaction, and
 </td>
 </tr>
 </table>
+
 ## What I'm interested in
 
 ```text
