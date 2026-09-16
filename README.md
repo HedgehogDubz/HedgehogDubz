@@ -20,6 +20,7 @@ I have worked on computational neuroscience GPU-accelerated clustering pipelines
 
 ---
 
+## Featured work
 
 
 <table>
@@ -85,8 +86,7 @@ Built during a livestream.
 </tr>
 </table>
 
-### Tech Stack
-
+## Tech Stack
 **Languages**  
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -115,7 +115,6 @@ Built during a livestream.
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
 
-## Featured work
 ## What I'm interested in
 
 ```text
