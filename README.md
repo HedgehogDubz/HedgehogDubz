@@ -14,7 +14,12 @@ Low-Latency Software · Machine Learning
 
 I have worked on computational neuroscience GPU-accelerated clustering pipelines, M&A software, market-data infrastructure, machine-learning tooling, and more. I fancy learning low-level development and building foundational architectures I understand inside and out.
 
+</td>
+</tr>
+</table>
+
 ---
+
 ### Tech Stack
 
 **Languages**  
@@ -44,12 +49,7 @@ I have worked on computational neuroscience GPU-accelerated clustering pipelines
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
-**AI-Assisted Development**  
-![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Codex](https://img.shields.io/badge/Codex-412991?style=for-the-badge&logo=openai&logoColor=white)
-</td>
-</tr>
-</table>
+
 ## Featured work
 
 <table>
