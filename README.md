@@ -115,15 +115,5 @@ Built during a livestream.
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
 
-## What I'm interested in
-
-```text
-low-latency systems
-market-data infrastructure
-GPU / parallel computing
-machine learning internals
-developer tools
-distributed + networked software
-```
 
 
